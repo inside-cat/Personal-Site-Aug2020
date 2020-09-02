@@ -1,0 +1,168 @@
+body {
+  background-color: #e7b2a5;
+  font-family: 'Comfortaa', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Comfortaa', sans-serif;
+  padding: 2% 0;
+}
+
+.about-sec, .links-sec, .contact-sec {
+  padding: 5% 4%;
+}
+
+/*Title Section*/
+
+#phoebe-name-nav,
+#about-nav,
+#links-nav,
+#contact-nav {
+  color: #e7b2a5;
+}
+
+#phoebe-name-nav:hover,
+#about-nav:hover,
+#links-nav:hover,
+#contact-nav:hover {
+  color: #ba6b57;
+}
+
+.title {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  background-image: url("/images/Phoebe-solid-banner.png");
+  padding: 1% 4% 0;
+  color: #e7b2a5;
+}
+
+.phoebe-image {
+  position: absolute;
+  z-index: 6;
+  width: 60%;
+  padding-bottom: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.title-text {
+  font-size: 3rem;
+  padding: 25% 5%;
+}
+
+.title-col {
+  padding: 3% 6% 0;
+}
+
+/* About Section */
+
+.about {
+  text-align: left;
+  color: #292929;
+  font-family: 'Nunito', sans-serif;
+}
+
+.cred-cards {
+  color: #ba6b57;;
+  font-family: 'Nunito', sans-serif;
+}
+
+.cred-button {
+  color: #e7b2a5;
+  font-family: 'Nunito', sans-serif;
+}
+
+.cred-button:hover {
+  color: #ba6b57;
+}
+
+.credentials {
+  padding: 3% 4%;
+}
+
+.bio {
+  padding: 3% 7%
+}
+
+/* Links Section */
+
+.link-button {
+  color: #e7b2a5;
+}
+
+.link-button:hover {
+  color: #ba6b57;
+}
+
+.link-btn-div {
+  padding: 1% 1%;
+}
+
+.left {
+  padding-left: 25%;
+}
+
+.right {
+  padding-right: 25%;
+}
+
+/* Contact Section */
+
+form {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  margin: auto;
+}
+
+form .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form .form-control:focus {
+  z-index: 2;
+}
+
+.top {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.middle{
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+
+.bottom {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Success/Failure Pages */
+
+.jumbo-style {
+  background-color: #292929;
+}
+
+/* For smaller screens */
+
+@media (max-width: 981px) {
+  .phoebe-image {
+    width: 40%;
+    position: static;
+  }
+
+  title-text{
+    position: static;
+    font-size: 1.5rem;
+    padding: 1% 10%;
+  }
+}
