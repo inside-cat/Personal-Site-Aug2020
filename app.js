@@ -19,12 +19,12 @@ app.get("/", function(req, res){
 app.post("/contact", function(req, res){
   // Instantiate the SMTP server
   const smtpTrans = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: "smtp.office365.com",
     port: 587,
     secure: false,
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS
+      user: process.env.OUTLOOK_USER,
+      pass: process.env.OUTLOOK_PASS
     },
     tls: { rejectUnauthorized: false }
   });
@@ -33,7 +33,7 @@ app.post("/contact", function(req, res){
   const mailOpts = {
     from: {
     name: "Phoebe Dowling",
-    address: process.env.GMAIL_USER
+    address: process.env.OUTLOOK_USER
     }, // This is ignored by Gmail
     to: process.env.USER2,
     subject: 'New message from contact form',
