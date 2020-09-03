@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const nodemailer = require("nodemailer");
 
+
 const app = express();
 
 app.use(express.static("public"));
@@ -19,18 +20,22 @@ app.post("/contact", function(req, res){
   // Instantiate the SMTP server
   const smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.GMAIL_USER,
       pass: process.env.GMAIL_PASS
-    }
+    },
+    tls: { rejectUnauthorized: false }
   });
 
   // Specify what the email will look like
   const mailOpts = {
-    from: 'Your sender info here', // This is ignored by Gmail
-    to: process.env.GMAIL_USER,
+    from: {
+    name: "Phoebe Dowling",
+    address: process.env.GMAIL_USER
+    }, // This is ignored by Gmail
+    to: process.env.USER2,
     subject: 'New message from contact form',
     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
   }
@@ -46,8 +51,26 @@ app.post("/contact", function(req, res){
   });
 });
 
+app.post("/failure", function(req, res){
+  res.redirect("/");
+});
 
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Server is running on port 3000");
 });
+
+
+
+
+
+// const sgMail = require('@sendgrid/mail');
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+//   const msg = {
+//     to: 'test@example.com',
+//     from: 'test@example.com',
+//     subject: 'Sending with Twilio SendGrid is Fun',
+//     text: 'and easy to do anywhere, even with Node.js',
+//     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+//   };
+//   sgMail.send(msg);
