@@ -14,6 +14,9 @@ h2 {
 }
 
 /*Title Section*/
+nav {
+  background-color: #292929;
+}
 
 #phoebe-name-nav,
 #about-nav,
@@ -34,7 +37,7 @@ h2 {
   z-index: 5;
   text-align: center;
   background-image: url("/images/Phoebe-solid-banner.png");
-  padding: 1% 4% 0;
+  padding: 4% 4% 0;
   color: #e7b2a5;
 }
 
@@ -172,5 +175,9 @@ form .form-control:focus {
     position: static;
     font-size: 1.5rem;
     padding: 1% 10%;
+  }
+
+  .link-btn-div {
+    padding: 1% 1%;
   }
 }
