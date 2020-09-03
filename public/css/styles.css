@@ -146,6 +146,14 @@ form .form-control:focus {
   border-top-right-radius: 0;
 }
 
+.contact-submit-button {
+  color: #e7b2a5;
+}
+
+.contact-submit-button:hover {
+  color: #ba6b57;
+}
+
 /* Success/Failure Pages */
 
 .jumbo-style {
